@@ -35,7 +35,7 @@ body, html {
   color:#255784;
   background: #2196f3;
   box-shadow: 0 0 20px #2196f3;
-  transition-delay: 1s;
+  transition-delay: 0.5s;
 }
 .links a span
 {
@@ -53,7 +53,7 @@ body, html {
 .links a:hover span:nth-child(1)
 {
   left: 100%;
-  transition : 1s;
+  transition : 0.5s;
 }
 .links a span:nth-child(3)
 {
@@ -66,8 +66,8 @@ body, html {
 .links a:hover span:nth-child(3)
 {
   right: 100%;
-  transition : 1s;
-  transition-delay: 0.5s;
+  transition : 0.5s;
+  transition-delay: 0.25s;
 }
 .links a span:nth-child(2)
 {
@@ -80,8 +80,8 @@ body, html {
 .links a:hover span:nth-child(2)
 {
   top: 100%;
-  transition : 1s;
-  transition-delay: 0.25s;
+  transition : 0.5s;
+  transition-delay: 0.12s;
 }
 .links a span:nth-child(4)
 {
@@ -94,8 +94,8 @@ body, html {
 .links a:hover span:nth-child(4)
 {
   bottom: 100%;
-  transition : 1s;
-  transition-delay: 0.75s;
+  transition : 0.5s;
+  transition-delay: 0.37s;
 }
 footer a
 {
