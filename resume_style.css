@@ -1,0 +1,40 @@
+.container_fluid
+{
+    margin: 20px;
+    padding : 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+a{
+    /* text-decoration: none; */
+    color: black;
+}
+header{
+    /* position: relative; */
+    display: inline;
+}
+table,th,td{
+    border: 1px solid #87ceeb;
+}
+.width_100
+{
+    width: 100%;
+}
+th, td{
+    padding: 2px;
+}
+td p{
+   margin-left: 5px;
+}
+.bold
+{
+    font-weight: bold;
+}
+header .email a .right{
+    float: right;
+}
+header .right{
+    float: right;
+}
+.right{
+    float: right;
+}  
