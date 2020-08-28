@@ -1,6 +1,7 @@
 <html>
     <head> <title> PortFolio </title>
     <link rel="Stylesheet" href="style.css">
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body class="bg" >
@@ -71,12 +72,18 @@
         <br>
         <footer>
         <div id="contact" class="text-center" >
-            <a href="https://www.linkedin.com/in/vicky-sindhwad-a05894131"><ion-icon size="large"  name="logo-linkedin"></ion-icon></a>
+            <a href="#" id="linkedin" ><ion-icon size="large"  name="logo-linkedin">
+                </ion-icon></a>
             <a href="https://github.com/viku53"><ion-icon size="large"  name="logo-github"></ion-icon></a>
             <a href=""><ion-icon size="large"  name="logo-instagram"></ion-icon></a>
             <a href="mailto:sindhwadvicky@gmail.com"><ion-icon size="large"  name="mail"></ion-icon></a>
             <a href="https://wa.me/918655718830"><ion-icon size="large"  name="logo-whatsapp"></ion-icon></a>
             <a href=""><ion-icon size="large"  name="logo-facebook"></ion-icon></a>
+            <div id="toggle">
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="vicky-sindhwad-a05894131">
+                    <a class="LI-simple-link" href='https://in.linkedin.com/in/vicky-sindhwad-a05894131?trk=profile-badge'>Vicky Sindhwad</a>
+                </div>
+            </div>
         </div></footer>
     </div>
     </body>
@@ -86,7 +93,9 @@
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-    
+    $("#linkedin").click(function(){
+        $("#toggle").css("visibility", "visible").fadeToggle(1000);
+    });
     $("#con").click(function(){
         $("#contact").css("visibility", "visible").fadeToggle(1000);
     });
