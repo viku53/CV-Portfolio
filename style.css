@@ -16,7 +16,7 @@ body, html {
   
     height: 100%; 
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 .links a{
@@ -103,4 +103,10 @@ footer a
 }
 h3{
   color:#255784;
+}
+#toggle {
+  display: none;
+}
+.LI-profile-badge {
+  margin-top: 5%;
 }
