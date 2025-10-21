@@ -59,15 +59,13 @@ td {
 }
 
 .moving-text {
-    color: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    margin-right: -40em;
-    
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    margin-right: -55em;
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
 .social {
     font-size: 3em;
 }
