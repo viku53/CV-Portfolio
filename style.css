@@ -60,8 +60,10 @@ td {
 
 .moving-text {
     color: rgba(255, 255, 255, 0.7);
-    position: relative;
-    margin-right: -55em;
+    position: absolute;
+    margin-right: -58em;
+    left: 0;
+    right: 0;
     -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
