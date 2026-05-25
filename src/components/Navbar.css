@@ -1,0 +1,213 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px 0;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navbar.scrolled {
+  padding: 14px 0;
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-text {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: -1px;
+}
+
+.logo-vs {
+  color: var(--text-primary);
+}
+
+.logo-dot {
+  color: var(--accent);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #b8b8b8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Nav Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #d0d0d0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+}
+
+.nav-resume:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-cta {
+  padding: 10px 24px;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-cta:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.menu-icon {
+  display: none;
+  color: var(--text-primary);
+  padding: 6px;
+  background: none;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.menu-icon:hover { color: var(--accent); }
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mobile-nav.mobile-open {
+  max-height: 600px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 6%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLink 0.3s forwards;
+}
+
+.mobile-nav.mobile-open .mobile-nav-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes slideInLink {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.mobile-nav-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+}
+
+.mobile-resume-link {
+  color: var(--accent) !important;
+  border-bottom: none !important;
+  font-size: 1rem !important;
+}
+
+.mobile-resume-link:hover {
+  background: rgba(200, 255, 0, 0.06);
+}
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-resume { display: none; }
+  .menu-icon { display: flex; }
+  .mobile-nav { display: flex; }
+  .nav-cta { padding: 8px 18px; font-size: 0.75rem; }
+}
