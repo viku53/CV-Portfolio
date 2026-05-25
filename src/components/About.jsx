@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
+import { awards } from './helpers';
 
 const skills = [
   { name: 'SFCC / B2C', level: 90 },
@@ -140,7 +141,7 @@ const About = () => {
           { num: '6+', label: 'Years Experience' },
           { num: '10+', label: 'Enterprise Projects' },
           { num: '2', label: 'SF Certifications' },
-          { num: '5★', label: 'Awards Received' },
+          { num: awards.length+'+', label: 'Awards Received' },
         ].map((m, i) => (
           <motion.div
             key={i}
