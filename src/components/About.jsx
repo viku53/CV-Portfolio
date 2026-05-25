@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import './About.css';
 
 const skills = [
-  { name: 'SFCC / B2C', level: 95 },
+  { name: 'SFCC / B2C', level: 90 },
   { name: 'PWA Kit', level: 92 },
-  { name: 'ReactJS', level: 90 },
+  { name: 'ReactJS', level: 95 },
   { name: 'JavaScript', level: 95 },
-  { name: 'Java', level: 70 },
+  { name: 'Java', level: 80 },
   { name: 'Node.js', level: 75 },
   { name: 'Magento 2', level: 78 },
   { name: 'PHP', level: 72 },
