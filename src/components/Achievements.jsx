@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Achievements.css';
+import { title } from 'framer-motion/client';
 
 const certifications = [
   {
@@ -20,6 +21,13 @@ const certifications = [
 ];
 
 const awards = [
+  {
+    title: 'On the Spot Award',
+    org: 'Tata Consultancy Services',
+    date: 'October 2025',
+    desc: 'Awarded for outstanding contribution to a high-impact project.',
+    icon: '🎉',
+  },
   {
     title: 'Pat on the Back Award',
     org: 'Adapty Solutions',
