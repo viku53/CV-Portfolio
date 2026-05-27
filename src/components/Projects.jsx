@@ -2,42 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiExternalLink, FiGithub } from 'react-icons/fi';
 import './Projects.css';
-
-const projects = [
-  {
-    id: '01',
-    title: 'Photographer Portfolio',
-    category: 'Frontend / Design',
-    description: 'A sleek, responsive portfolio website for a photographer. Showcases high-quality images with smooth animations and a minimalist design. Built with React and styled-components for a modern look.',
-    tech: ['React', 'Next.js', 'Styled-Components', 'Framer Motion'],
-    liveUrl: 'https://krishnacreationphotography.com/',
-    githubUrl: '',
-    status: 'Live',
-    highlight: true
-  },
-  {
-    id: '02',
-    title: 'Sliding Puzzle Game',
-    category: 'Frontend / Game Dev',
-    description: 'An addictive, browser-based sliding puzzle game built with vanilla JavaScript. Features smooth tile animations, move counter, timer, and multiple difficulty levels. Fully responsive across all devices.',
-    tech: ['JavaScript', 'HTML5', 'CSS3', 'Canvas API'],
-    liveUrl: 'https://viku53.github.io/puzzle_game/',
-    githubUrl: 'https://github.com/viku53/puzzle_game',
-    status: 'Live',
-    highlight: false,
-  },
-  {
-    id: '03',
-    title: 'Stopwatch App',
-    category: 'Frontend / Utility',
-    description: 'A precision stopwatch with lap tracking, reset functionality, and a clean UI. Built for speed and reliability using vanilla JavaScript with zero dependencies. Pixel-perfect on all screen sizes.',
-    tech: ['JavaScript', 'HTML5', 'CSS3'],
-    liveUrl: 'https://viku53.github.io/stopWatch/',
-    githubUrl: 'https://github.com/viku53/stopWatch',
-    status: 'Live',
-    highlight: false,
-  },
-];
+import { projects } from './helpers';
 
 const Projects = () => {
   const [hovered, setHovered] = useState(null);
@@ -99,7 +64,7 @@ const Projects = () => {
                 <FiExternalLink size={18} />
                 <span>View Live</span>
               </a>
-              <a
+              {/* <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -107,7 +72,7 @@ const Projects = () => {
                 aria-label={`View ${project.title} on GitHub`}
               >
                 <FiGithub size={18} />
-              </a>
+              </a> */}
             </div>
 
             <div className="project-index-bg">{project.id}</div>

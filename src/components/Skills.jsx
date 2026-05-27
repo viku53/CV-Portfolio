@@ -1,49 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './Skills.css';
-
-const skillGroups = [
-  {
-    category: 'E-Commerce Platforms',
-    icon: '🛒',
-    skills: [
-      { name: 'Salesforce B2C Commerce (SFCC)', level: 95 },
-      { name: 'PWA Kit / React Storefront', level: 92 },
-      { name: 'SFRA (Storefront Reference Architecture)', level: 90 },
-      { name: 'Magento 2', level: 78 },
-    ],
-  },
-  {
-    category: 'Frontend Development',
-    icon: '⚡',
-    skills: [
-      { name: 'ReactJS / Hooks / Custom Hooks', level: 90 },
-      { name: 'JavaScript (ES6+)', level: 95 },
-      { name: 'HTML5 / CSS3 / Responsive Design', level: 95 },
-      { name: 'Webpack / GulpJS', level: 82 },
-    ],
-  },
-  {
-    category: 'Backend & Languages',
-    icon: '🔧',
-    skills: [
-      { name: 'Java', level: 80 },
-      { name: 'Node.js', level: 75 },
-      { name: 'PHP', level: 72 },
-      { name: 'Python', level: 65 },
-    ],
-  },
-  {
-    category: 'Tools & Integrations',
-    icon: '🛠',
-    skills: [
-      { name: 'Google Tag Manager (GTM)', level: 85 },
-      { name: 'Fabric Customer API', level: 80 },
-      { name: 'Core Web Vitals Optimization', level: 90 },
-      { name: 'BOPIS / SDD Fulfillment', level: 85 },
-    ],
-  },
-];
+import { skillGroups } from './helpers';
 
 const Skills = () => {
   return (

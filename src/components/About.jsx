@@ -1,29 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './About.css';
-import { awards } from './helpers';
-
-const skills = [
-  { name: 'SFCC / B2C', level: 90 },
-  { name: 'PWA Kit', level: 92 },
-  { name: 'ReactJS', level: 95 },
-  { name: 'JavaScript', level: 95 },
-  { name: 'Java', level: 80 },
-  { name: 'Node.js', level: 75 },
-  { name: 'Magento 2', level: 78 },
-  { name: 'PHP', level: 72 },
-  { name: 'Python', level: 50 },
-  { name: 'HTML5 / CSS3', level: 95 },
-  { name: 'Webpack / GulpJS', level: 82 },
-  { name: 'Git', level: 90 },
-];
-
-const techStack = [
-  { category: 'E-Commerce', items: ['SFCC / B2C Commerce', 'PWA Kit', 'SFRA', 'Magento 2'] },
-  { category: 'Frontend', items: ['ReactJS', 'JavaScript ES6+', 'HTML5', 'CSS3', 'Webpack', 'GulpJS'] },
-  { category: 'Backend', items: ['Node.js', 'Java', 'PHP', 'Python'] },
-  { category: 'Tools & Infra', items: ['Git', 'GTM', 'Jira', 'Copado', 'Postman'] },
-];
+import { awards, techStack } from './helpers';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

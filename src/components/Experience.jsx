@@ -2,91 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowRight, FiCalendar, FiMapPin, FiChevronDown } from 'react-icons/fi';
 import './Experience.css';
+import { experiences } from './helpers';
 
-const experiences = [
-  {
-    id: '01',
-    role: 'Lead Developer',
-    company: 'Tata Consultancy Services',
-    location: 'Mumbai, India',
-    period: 'April 2024 — Present',
-    type: 'Full-time',
-    tags: ['SFCC', 'PWA Kit', 'ReactJS', 'Accessibility'],
-    highlights: [
-      'Leading SFCC PWA frontend architecture for JLR (Jaguar Land Rover) US — a globally iconic automotive brand',
-      'Designed and implemented scalable React component architecture using custom hooks and context patterns',
-      'Led accessibility remediation achieving full WCAG 2.1 AA compliance for US market standards',
-      'Drove code quality initiatives — linting standards, PR reviews, performance optimization, and tech debt reduction',
-      'Mentored junior developers and established front-end best practices across the team',
-    ],
-    projects: null,
-  },
-  {
-    id: '02',
-    role: 'Technical Lead',
-    company: 'Adapty Solutions Pvt Ltd',
-    location: 'Mumbai, India',
-    period: 'January 2020 — April 2024',
-    type: 'Full-time',
-    tags: ['SFCC', 'SFRA', 'GTM', 'Fabric API', 'PayPal', 'Loqate', 'SEO'],
-    highlights: [
-      'Served as Technical Lead across 4 enterprise SFCC storefronts: GNC, Pet SuperMarket, The Watchbox & AERIN',
-      'Owned end-to-end delivery — architecture, solutioning, task estimation, development, and mentoring',
-      'Consistently delivered on high-priority tickets, complex integrations, and performance improvements',
-    ],
-    projects: [
-      {
-        name: 'GNC (US & CA)',
-        period: 'June 2022 – April 2024',
-        tech: 'SFCC – Controller Version',
-        points: [
-          'Extensive experience in optimizing websites for Search Engine Optimization (SEO)',
-          'Successfully improved website performance by optimizing Core Web Vitals (LCP, FID, CLS)',
-          'Proficient in analytics tools for comprehensive data analysis',
-          'Successfully integrated Google Tag Manager (GTM) for efficient data management',
-          'Expertise in seamlessly integrating the Fabric Customer API within the SFCC platform',
-          'Played a crucial role in redesigning key pages: Account Page, Rewards Page, and OG SMI Page',
-          'Demonstrated expertise in Page Designer tasks, enhancing visual and functional aspects of web pages',
-        ],
-      },
-      {
-        name: 'Pet SuperMarket (US)',
-        period: 'September 2022 – January 2023',
-        tech: 'SFCC – SFRA 6',
-        points: [
-          'Effectively addressed high-priority issues within the Salesforce Commerce Cloud checkout system',
-          'Successfully implemented Multi-Fulfillment features: Direct-to-Customer (DTC), BOPIS, and Same Day Delivery (SDD)',
-          'Seamlessly integrated payment methods: PayPal, Apple Pay, and CyberSource for enhanced checkout',
-          'Contributed a comprehensive approach to optimizing the full e-commerce checkout process',
-          'Worked primarily on high-priority tickets and groomed junior developers on the checkout flow',
-        ],
-      },
-      {
-        name: 'The Watchbox (US)',
-        period: 'April 2021 – July 2021',
-        tech: 'SFCC – SFRA 5',
-        points: [
-          'Led implementation of a new front-end skin / visual redesign for the storefront',
-          'Responsible for task estimation, solution design, and full development delivery',
-          'Implemented custom strap selection feature on the Product Detail Page (PDP), enhancing UX and functionality',
-        ],
-      },
-      {
-        name: 'AERIN (US)',
-        period: 'January 2020 – July 2022',
-        tech: 'SFCC – SFRA 4, 5, 6',
-        points: [
-          'Worked as Technical Lead for this SFRA project from day one',
-          'Responsible for maintaining client Campaigns, Promotions, data and code replication',
-          'Executed SFRA cartridge upgrade from version 4.x to 6.x with zero downtime',
-          'Responsible for task estimation, solutioning, and full-stack development',
-          'Worked on Content Assets, Content Slots, Promotion Banners, Bug Fixes, and Page Designer Components',
-          'Successfully integrated Loqate for Address Verification on checkout, Create Account, Billing and Shipping pages',
-        ],
-      },
-    ],
-  },
-];
+
 
 const ProjectAccordion = ({ project, index }) => {
   const [open, setOpen] = useState(index === 0);

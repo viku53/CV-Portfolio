@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { FiMenu, FiX, FiDownload, FiFileText } from 'react-icons/fi';
 import './Navbar.css';
+import { navLinks } from './helpers';
 
 const RESUME_URL = 'https://drive.google.com/file/d/1ZCoiyAXv3dWzypomT2E953Xlboizoc1l/view';
 
@@ -17,15 +18,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: 'About', to: 'about' },
-    { name: 'Experience', to: 'experience' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Awards', to: 'achievements' },
-    { name: 'Contact', to: 'contact' },
-  ];
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>

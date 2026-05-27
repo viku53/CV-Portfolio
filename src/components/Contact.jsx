@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: <FiLinkedin size={20} />,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/vicky-sindhwad',
+      href: 'https://in.linkedin.com/in/vicky-sindhwad-a05894131',
       handle: '/in/vicky-sindhwad',
     },
     {
@@ -157,7 +157,6 @@ const Contact = () => {
         <p className="footer-copy">
           © {new Date().getFullYear()} Vicky Sindhwad. Designed & built with 💚
         </p>
-        <p className="footer-stack">Built with React + Vite + Framer Motion</p>
       </motion.div>
     </section>
   );
